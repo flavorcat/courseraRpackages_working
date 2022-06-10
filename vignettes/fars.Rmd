@@ -1,0 +1,45 @@
+---
+title: "The fars package"
+author: "Andrew G."
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{fars}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, include = FALSE}
+library(fars)
+library(knitr)
+```
+
+The fars package provides several tools for interacting with data sets from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System, a nationwide collection of information about deaths in traffic accidents in the United States.
+
+A fars data set can be read directly by name using the ${\tt fars\_read}$ function. For instance, if the file accident_2013.csv.bz2 exists in the working directory, then ${\tt fars\_read("accident\_2013.csv.bz2")}$ will load it into R's working memory.
+
+A group of fars data sets can be read in by specifying their years in the ${\tt fars\_read\_years}$ function. For instance,
+
+```{r warning=FALSE}
+years <- 2013:2015
+fars_list <- fars_read_years(years)
+```
+
+Summary data about fars sets can be obtained with the ${\tt fars\_summarize\_years}$.
+
+```{r}
+fars_summary <- fars_summarize_years(years)
+kable(fars_summary)
+```
+
+Finally, the ${\tt fars\_map\_state}$ function plots rudimentary state-level maps of traffic fatalities based on the state's numerical id number. For instance, here's a map of traffic fatalities in Alabama in 2014.
+
+```{r}
+fars_map_state(1, 2014)
+```
