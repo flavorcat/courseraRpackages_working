@@ -18,5 +18,7 @@ year of the set. Note that no checks are run to ensure that a file with
 the given name actually exists in the working directory.
 }
 \examples{
+\dontrun{
 file_path <- make_filename(2014)
+}
 }

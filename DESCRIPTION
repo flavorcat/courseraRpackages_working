@@ -10,12 +10,15 @@ Encoding: UTF-8
 LazyData: true
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
 Imports: 
     dplyr,
-    magrittr,
-    readr
+    maps,
+    readr,
+    tidyr
 RoxygenNote: 7.2.0
 Depends: 
-    R (>= 2.10)
+    R (>= 3.5.0)
+Config/testthat/edition: 3

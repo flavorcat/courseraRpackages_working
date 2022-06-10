@@ -20,7 +20,10 @@ for a specified state. Errors are thrown if an invalid year or state number is i
 and a warning is generated if there are no accidents for the year/state specified.
 }
 \examples{
+\dontrun{
 fars_map_state(1, 2014) # Alabama map from 2014
 fars_map_state(18, 2013) # Indiana map from 2013
+}
+
 
 }

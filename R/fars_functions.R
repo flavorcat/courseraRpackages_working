@@ -9,10 +9,14 @@
 #' @return This function returns a tibble of the set specified.
 #'
 #' @examples
+#' \dontrun{
 #' fars_data <- readr::read_csv("accident_2013.csv.bz2")
+#' }
 #'
 #' @importFrom readr read_csv
 #' @import dplyr
+#' @import tidyr
+#' @import maps
 #'
 #' @export
 fars_read <- function(filename) {
@@ -35,7 +39,9 @@ fars_read <- function(filename) {
 #' @return This function returns a file path in the standard format of compressed fars files.
 #'
 #' @examples
+#' \dontrun{
 #' file_path <- make_filename(2014)
+#' }
 make_filename <- function(year) {
   year <- as.integer(year)
   sprintf("accident_%d.csv.bz2", year)
@@ -53,11 +59,10 @@ make_filename <- function(year) {
 #' be null if corresponding values of the input do not give rise to valid file names.
 #'
 #' @examples
+#' \dontrun{
 #' years <- 2013:2015
 #' fars_list <- fars_read_years(years)
-#'
-#' @import magrittr
-#' @import dplyr
+#' }
 #'
 #' @export
 fars_read_years <- function(years) {
@@ -99,11 +104,11 @@ fars_read_years <- function(years) {
 #' of months, the output includes one column for each year specified.
 #'
 #' @examples
+#' \dontrun{
 #' years <- 2013:2015
 #' fars_summary <- fars_summarize_years(years)
+#' }
 #'
-#' @import magrittr
-#' @import dplyr
 #'
 #' @export
 fars_summarize_years <- function(years) {
@@ -126,8 +131,11 @@ fars_summarize_years <- function(years) {
 #' @return A simple plot of accident locations.
 #'
 #' @examples
+#' \dontrun{
 #' fars_map_state(1, 2014) # Alabama map from 2014
 #' fars_map_state(18, 2013) # Indiana map from 2013
+#' }
+#'
 #'
 #' @export
 fars_map_state <- function(state.num, year) {

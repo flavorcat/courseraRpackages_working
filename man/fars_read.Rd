@@ -18,6 +18,8 @@ to make sure the specified file actually exists, then imports it with read_csv
 if it does. An error is thrown if the file does not exist.
 }
 \examples{
+\dontrun{
 fars_data <- readr::read_csv("accident_2013.csv.bz2")
+}
 
 }

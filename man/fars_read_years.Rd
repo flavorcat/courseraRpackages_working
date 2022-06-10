@@ -19,7 +19,9 @@ A warning message is passed if any of the years specified do not correspond to
 valid files in the workingn directory.
 }
 \examples{
+\dontrun{
 years <- 2013:2015
 fars_list <- fars_read_years(years)
+}
 
 }

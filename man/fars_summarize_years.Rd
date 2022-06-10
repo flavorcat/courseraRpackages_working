@@ -2,7 +2,7 @@
 % Please edit documentation in R/fars_functions.R
 \name{fars_summarize_years}
 \alias{fars_summarize_years}
-\title{Import and sumarize multiple fars data sets.}
+\title{Import and summarize multiple fars data sets.}
 \usage{
 fars_summarize_years(years)
 }
@@ -18,7 +18,10 @@ This function imports multiple fars data sets, specified by a numeric vector of
 years, and returns a tibble with monthly counts for those years.
 }
 \examples{
+\dontrun{
 years <- 2013:2015
 fars_summary <- fars_summarize_years(years)
+}
+
 
 }
