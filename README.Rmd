@@ -1,0 +1,23 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# fars
+
+<!-- badges: start -->
+Note that there is no _Travis_ badge here because that service now requires a credit card, which I'm not able to provide. 
+<!-- badges: end -->
+
+The fars package is a practice build for the Coursera course _Building R Packages_. It's not intended for actual use. 
+
